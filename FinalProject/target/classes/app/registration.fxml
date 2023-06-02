@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegistrationController">
+   <children>
+      <Label layoutX="170.0" layoutY="108.0" text="Name" />
+      <TextField fx:id="name" layoutX="246.0" layoutY="107.0" />
+      <Label layoutX="245.0" layoutY="48.0" text="Registraion">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="171.0" layoutY="140.0" text="Email" />
+      <Label layoutX="171.0" layoutY="168.0" text="Age" />
+      <TextField fx:id="email" layoutX="246.0" layoutY="136.0" />
+      <TextField fx:id="age" layoutX="245.0" layoutY="165.0" />
+      <Label layoutX="170.0" layoutY="198.0" text="Password" />
+      <PasswordField fx:id="password" layoutX="245.0" layoutY="193.0" />
+      <RadioButton layoutX="264.0" layoutY="227.0" mnemonicParsing="false" text="A+">
+         <toggleGroup>
+            <ToggleGroup fx:id="blood" />
+         </toggleGroup>
+      </RadioButton>
+      <Label layoutX="170.0" layoutY="230.0" text="Blood Group" />
+      <RadioButton layoutX="309.0" layoutY="228.0" mnemonicParsing="false" text="A-" toggleGroup="$blood" />
+      <RadioButton layoutX="398.0" layoutY="229.0" mnemonicParsing="false" text="B-" toggleGroup="$blood" />
+      <RadioButton layoutX="352.0" layoutY="229.0" mnemonicParsing="false" text="B+" toggleGroup="$blood" />
+      <Button layoutX="170.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleRegistration" style="-fx-background-color: white;" text="Register" />
+      <Button layoutX="258.0" layoutY="318.0" mnemonicParsing="false" onAction="#goToLoginScene" style="-fx-background-color: white;" text="Login" />
+      <Label layoutX="170.0" layoutY="283.0" text="Type" />
+      <RadioButton fx:id="donorType" layoutX="247.0" layoutY="283.0" mnemonicParsing="false" text="Donor">
+         <toggleGroup>
+            <ToggleGroup fx:id="type" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="userType" layoutX="320.0" layoutY="283.0" mnemonicParsing="false" text="User" toggleGroup="$type" />
+      <TextField fx:id="phone" layoutX="247.0" layoutY="252.0" />
+      <Label layoutX="172.0" layoutY="257.0" text="Phone" />
+   </children>
+</AnchorPane>
